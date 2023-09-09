@@ -21,7 +21,7 @@ module ExecJS
     Bun = ExternalRuntime.new(
       name:        "Bun",
       command:     ["bun"],
-      runner_path: ExecJS.root + "/support/node_runner.js",
+      runner_path: ExecJS.root + "/support/bun_runner.js",
       encoding:    'UTF-8'
     )
   
