@@ -18,6 +18,13 @@ module ExecJS
 
     MiniRacer = MiniRacerRuntime.new
 
+    Bun = ExternalRuntime.new(
+      name:        "Bun",
+      command:     ["bun"],
+      runner_path: ExecJS.root + "/support/node_runner.js",
+      encoding:    'UTF-8'
+    )
+  
     Node = ExternalRuntime.new(
       name:        "Node.js (V8)",
       command:     ["node", "nodejs"],
@@ -88,6 +95,7 @@ module ExecJS
         GraalJS,
         Duktape,
         MiniRacer,
+        Bun,
         Node,
         JavaScriptCore,
         SpiderMonkey,
